@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===========================
+   🎨 Global Variables
+   =========================== */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #00ffff;
+  --bg-color: #0f172a;
+  --text-color: #ffffff;
+  --muted-text: #94a3b8;
+  --section-padding: 60px;
+  --section-gap: 50px;
+  --max-width: 1200px;
+}
+
+/* ===========================
+   🌍 Global Reset & Base
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===========================
+   📏 Container
+   =========================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   📌 Section Styles
+   =========================== */
+section {
+  padding: var(--section-padding) 0;
+}
+
+section + section {
+  margin-top: var(--section-gap);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* ===========================
+   🖋 Text Utilities
+   =========================== */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted-text);
+}
+
+/* ===========================
+   🔘 Button Styles
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, var(--primary-color), #1e40af);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #1e40af, var(--primary-color));
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   🖼 Image Utilities
+   =========================== */
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-shadow {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* ===========================
+   📱 Responsive Utilities
+   =========================== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 40px;
+    --section-gap: 30px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

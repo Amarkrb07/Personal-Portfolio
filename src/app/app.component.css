@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1976d2;
+}
+
+section {
+  padding: 60px 20px;
+}
+

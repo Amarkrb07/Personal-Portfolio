@@ -1,0 +1,100 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  min-height: 100vh;
+  background: #0f172a; /* Dark Royal Blue BG */
+  color: white;
+}
+
+.overlay {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.animated-name {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.animated-name span {
+  color: #00ffff; /* Cyan Glow */
+}
+
+.role {
+  font-size: 26px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+  min-height: 40px; /* Reserve space for typing effect */
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+.home-image {
+  flex: 1;
+  text-align: right;
+}
+
+.home-image img {
+  width: 350px; /* jitna size chahiye */
+  height: 450px; /* equal height & width for perfect circle */
+  object-fit: cover; /* image ko crop karke fit karega */
+  border-radius: 50%; /* circular banane ka main property */
+  border: 4px solid #00ffff; /* optional border for style */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* optional glow */
+}
+
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.3s; }
+.fade-in:nth-child(2) { animation-delay: 0.6s; }
+.fade-in:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .overlay {
+    padding-right: 0;
+  }
+  .home-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
